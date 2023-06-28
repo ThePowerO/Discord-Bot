@@ -17,14 +17,13 @@ async def rules(ctx):
 async def updatedate(ctx):
     image_url = "https://cdn.discordapp.com/attachments/777317677470580756/1119556806767820830/fetchimage.png"
 
-    async with aiohttp.ClientSession() as session: #create a asynchronous sesion that allow to do asynchronous HTTP solicitation.
-        async with session.get(image_url) as resp: #"resp" stores the response of the HTTP solicitation made by "session.get(image_url)".
-            if resp.status == 200: #"200" is an HTTP status code that indicates a successful response.
-
-                with open("image.png", "wb") as file: #"image.png" is name(can be whatever but let format of image) wb to open as binary recording
+    async with aiohttp.ClientSession() as session:
+        async with session.get(image_url) as resp:
+            if resp.status == 200: 
+                with open("image.png", "wb") as file:
                     file.write(await resp.read())
                 file = discord.File("image.png")
-                await ctx.reply(file=file) #the variable file turns to "file"(whatever name)
+                await ctx.reply(file=file)
             else:
                 await ctx.send("An error occured while getting the image.")
 
@@ -57,17 +56,13 @@ async def playersBF(ctx):
 @bot.command()
 async def playersMM2(ctx):
     url = "https://www.roblox.com/games/142823291/Murder-Mystery-2"
-    async with aiohttp.ClientSession() as session: #ClientSession represents a HTTP session and provides methods to send HTTP solicitations
+    async with aiohttp.ClientSession() as session:
         async with session.get(url) as resp:
-            #use session to start a HTTP GET solicitation to the url (get() method returns an asynchronous ClientResponse object, which contains the HTTP response.)
-            if resp.status == 200: #if good status or response of the website
-                html = await resp.text() #text() extract the content to resp (content of the HTTP)
+            if resp.status == 200:
+                html = await resp.text()
                 soup = BeautifulSoup(html, 'html.parser')
-                #BfSp analyze the HTML content (the one we want to), html parser is an internal implamentation of BfSp to analyze the HTML content
                 players_element = soup.find('p', {'class': 'text-lead font-caption-body wait-for-i18n-format-render'})
-                #soup's find method (finds the first <p> element that has class attributed equals to "acording to the HTML class name")
-                #The find() method returns the first element that matches the search criteria.
-                players_count = players_element.text.strip() #we access the "players_element" text using .text, .strip() to remove extra whitespace
+                layers_count = players_element.text.strip()
                 await ctx.reply(f"The current number of players playing Murder Mystery 2 is: {players_count}")
             else:
                 await ctx.reply("Unable to get the number of players at the moment.")
