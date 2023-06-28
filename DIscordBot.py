@@ -34,6 +34,14 @@ async def grandpiece(ctx):
 @bot.command()
 async def bloxfruits(ctx):
      await ctx.reply(f"https://www.roblox.com/games/2753915549/Blox-Fruits")
+        
+@bot.command()
+async def bedwars(ctx):
+        await ctx.reply(f'https://www.roblox.com/games/6872265039/BedWars-SEASON-8')
+
+@bot.command()
+async def murdermystery2(ctx):
+        await ctx.reply(f'https://www.roblox.com/games/142823291/Murder-Mystery-2')
 
 @bot.event
 async def on_ready():
