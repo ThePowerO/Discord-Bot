@@ -19,7 +19,7 @@ async def updatedate(ctx):
 
     async with aiohttp.ClientSession() as session: # create a asynchronous sesion that allow to do asynchronous HTTP solicitation.
         async with session.get(image_url) as resp: # "resp" stores the response of the HTTP solicitation made by "session.get(image_url)".
-            if resp.status == 200: #"200" is an HTTP status code that indicates a successful response.
+            if resp.status == 200: # "200" is an HTTP status code that indicates a successful response.
 
                 with open("image.png", "wb") as file: #"image.png" is name(can be whatever but let format of image) wb to open as binary recording
                     file.write(await resp.read())
