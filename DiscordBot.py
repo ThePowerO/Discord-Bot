@@ -11,7 +11,7 @@ bot = commands.Bot(command_prefix='!', intents=intents)
 
 @bot.command()
 async def rules(ctx):
-        await ctx.reply(f"1- Do not spam messages{os.linesep}2- Look at announciaments")
+        await ctx.reply(f"1- Do not spam messages{os.linesep}2- Look at announciaments.")
 
 @bot.command()
 async def updatedate(ctx):
