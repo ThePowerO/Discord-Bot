@@ -17,7 +17,7 @@ async def rules(ctx):
 async def updatedate(ctx):
     image_url = "https://cdn.discordapp.com/attachments/777317677470580756/1119556806767820830/fetchimage.png"
 
-    async with aiohttp.ClientSession() as session: #create a asynchronous sesion that allow to do asynchronous HTTP solicitation.
+    async with aiohttp.ClientSession() as session: # create a asynchronous sesion that allow to do asynchronous HTTP solicitation.
         async with session.get(image_url) as resp: #"resp" stores the response of the HTTP solicitation made by "session.get(image_url)".
             if resp.status == 200: #"200" is an HTTP status code that indicates a successful response.
 
