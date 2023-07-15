@@ -7,3 +7,5 @@ def open_roblox_profile(username):
 while True:
     username = input("Insert the roblox player username: ")
     open_roblox_profile(username)
+
+    repeat = input("Want to find someone else? (y/n): ")
