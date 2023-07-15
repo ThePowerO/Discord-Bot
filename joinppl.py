@@ -5,3 +5,4 @@ def open_roblox_profile(username):
     webbrowser.open(profile_url)
 
 while True:
+    username = input("Insert the roblox player username: ")
