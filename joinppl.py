@@ -9,3 +9,4 @@ while True:
     open_roblox_profile(username)
 
     repeat = input("Want to find someone else? (y/n): ")
+    if repeat.lower() in ['n', 'no']:
