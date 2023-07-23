@@ -120,3 +120,4 @@ async def playersTSB(ctx):
     async with aiohttp.ClientSession() as sesison:
         async with sesison.get(url) as resp:
             if resp.status == 200:
+                html = await resp.text()
