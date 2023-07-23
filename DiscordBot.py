@@ -116,3 +116,4 @@ async def playersArsenal(ctx):
 
 @bot.command()
 async def playersTSB(ctx):
+    url = "https://www.roblox.com/games/10449761463/The-Strongest-Battlegrounds"
