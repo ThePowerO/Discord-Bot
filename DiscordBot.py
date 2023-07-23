@@ -101,3 +101,4 @@ async def playersAF2(ctx):
                 await ctx.reply("Unable to get the number of players at the moment.")
 
 @bot.command()
+async def playersArsenal(ctx):
