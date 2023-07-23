@@ -89,3 +89,4 @@ async def playersBW(ctx):
 @bot.command()
 async def playersAF2(ctx):
     url = "https://www.roblox.com/games/6299805723/Update-37-x5-Anime-Fighters-Simulator"
+    async with aiohttp.ClientSession() as sesison:
