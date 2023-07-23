@@ -103,3 +103,4 @@ async def playersAF2(ctx):
 @bot.command()
 async def playersArsenal(ctx):
     url = "https://www.roblox.com/games/286090429/Arsenal"
+    async with aiohttp.ClientSession() as sesison:
