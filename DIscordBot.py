@@ -93,6 +93,12 @@ async def playersBW(ctx):
 async def playersAF2(ctx):
     url = "https://www.roblox.com/games/6299805723/Update-37-x5-Anime-Fighters-Simulator"
     async with aiohttp.ClientSession() as sesison:
-
+                html = await resp.text()
+                soup = BeautifulSoup(html, 'html.parser')
+                players_element = soup.find('p', {'class': 'text-lead font-caption-body wait-for-i18n-format-render'})
+                players_count = players_element.text.strip()
+                await ctx.reply(f"The current number of players playing Anime Fighters 2 is {players_count}")
+            else:
+                await ctx.reply("Unable to get the number of players at the moment.")
 
 bot.run("Token")
