@@ -99,3 +99,5 @@ async def playersAF2(ctx):
                 await ctx.reply(f"The current number of players playing Anime Fighters 2 is {players_count}")
             else:
                 await ctx.reply("Unable to get the number of players at the moment.")
+
+@bot.command()
