@@ -89,4 +89,7 @@ async def playersBW(ctx):
             else:
                 await ctx.reply("Unable to get the number of players at the moment.")
 
+@bot.command()
+
+
 bot.run("Token")
