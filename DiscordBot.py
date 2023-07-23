@@ -108,3 +108,4 @@ async def playersArsenal(ctx):
             if resp.status == 200:
                 html = await resp.text()
                 soup = BeautifulSoup(html, 'html.parser')
+                players_element = soup.find('p', {'class': 'text-lead font-caption-body wait-for-i18n-format-render'})
