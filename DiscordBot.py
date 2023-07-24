@@ -131,6 +131,7 @@ async def playersTSB(ctx):
 @bot.command()
 async def playersTSB(ctx):
     url = "https://www.roblox.com/games/6284583030/YEET-A-PET-Pet-Simulator-X"
+    async with aiohttp.ClientSession() as sesison:
 
 
 
