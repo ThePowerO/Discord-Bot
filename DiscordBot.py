@@ -127,3 +127,6 @@ async def playersTSB(ctx):
                 await ctx.reply(f"The current number of players playing The Strongest Battle Ground is {players_count}")
             else:
                 await ctx.reply("Unable to get the number of players at the moment.")
+
+@bot.command()
+
