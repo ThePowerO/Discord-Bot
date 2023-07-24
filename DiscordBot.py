@@ -138,6 +138,7 @@ async def playersTSB(ctx):
                 soup = BeautifulSoup(html, 'html.parser')
                 players_element = soup.find('p', {'class': 'text-lead font-caption-body wait-for-i18n-format-render'})
                 players_count = players_element.text.strip()
+                await ctx.reply(f"The current number of players playing The Strongest Battle Ground is {players_count}")
 
 
 
