@@ -135,6 +135,7 @@ async def playersTSB(ctx):
         async with sesison.get(url) as resp:
             if resp.status == 200:
                 html = await resp.text()
+                soup = BeautifulSoup(html, 'html.parser')
 
 
 
