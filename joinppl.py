@@ -1,3 +1,4 @@
+import PySimpleGUI as sg
 import webbrowser
 
 def open_roblox_profile(username):
