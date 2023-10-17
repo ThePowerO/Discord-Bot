@@ -17,3 +17,5 @@ while True:
     repeat = input("Want to find someone else? (y/n): ")
     if repeat.lower() in ['n', 'no']:
         break
+
+window.close()
